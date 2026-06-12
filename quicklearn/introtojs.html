@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro to JS</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body onload="StarTime()">
+
+    <div id="ReadTime"></div>
+
+    <script src="jsfile.js"></script>
+
+    <p id="demo"></p>
+    <script>
+        // JavaScript Code goes here
+        document.write("Hello, JS<br>")
+        document.write(100 + 100)
+        document.getElementById("demo").innerHTML = "This demo is a paragraph😔"
+    </script>
+    <br>
+
+    <button type="button" onclick="document.getElementById('Uchiggers').src='../images/itachi.jpg'">Itachi</button>
+
+    <img id="Uchiggers" src="../images/itachi.jpg" alt="" width="100">
+
+    <button type="button" onclick="document.getElementById('Uchiggers').src='../images/sasuke.jpg'">Sasuke</button>
+    <br>
+
+    <script>
+        //window.alert("The database was connected successfully")
+        console.log(1000 - 99)
+    </script>
+    <br>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Email</th>
+            <th>Action</th>
+        </tr>
+        <tr>
+            <td>Itachi</td>
+            <td>29</td>
+            <td>iuchicha@akatsuki.com</td>
+            <td>
+                <button type="button"></button>
+                <button type="button"></button>
+
+            </td>
+
+        </tr>
+    </table>
+    <br>
+
+    <script>
+        var userName = "Itachi Uchiha";
+        let userAge = 29;
+        document.write("<br>His name is " + userName + " and is " + userAge + " yrs old<br>")
+
+        var score = 67;
+        document.write("<br>Current Score= " + score)
+        score += 10;
+        document.write("<br>New Score = " + score + "<br>")
+
+        const num1 = 5;
+        const num2 = 10;
+        const sum = num1 + num2;
+        document.write("<br>The first number is " + num1 + " and second number is " + num2 + ". Their sum is " + sum + ".<br>")
+
+        //An example segment that crashes since const cannot be updated
+        //const age =20;
+        //age+=20
+        //document.write("<br> Age: " + age + ".<br>")
+
+
+        //var name = prompt("Please enter your full name:")
+        //document.write("<br>Hello, " + name + ".<br>")
+
+        var fruits = ['Pomegranates', 'Bergamot', 'Cherries']
+        document.write("<br>Fruits: " + fruits.join(", ") + "<br>")
+
+        let i = 3;
+        while(i<=15){
+            if(i%2==0){
+                document.write("<br>" + i + "\n")
+            }
+            i +=1;
+            
+        }
+        do{
+            if(i%2==0){
+                document.write("<br>" + i + "\n")
+            }
+            i +=1;
+        } while(i<=15);
+        
+        for(var k = 0;k<=3;k++){
+            Colors = ['Red', 'Green', 'Blue', 'Yellow']
+            for(var colors in Colors){
+                document.write(k+1 + ". " + color + "\n<br>")
+            }
+        }
+    </script>
+    <br>
+    <select>
+        <option>Select registration date</option>
+        <script>
+            for(var day=1;day<=31;day++){
+                document.write("<option>" + day + "</option>") // What is the diff btn ver 1 and 2?
+            }
+        </script>
+    </select>
+    <select>
+        <option>Select month</option>
+        <script>
+            var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+            for(var month=1;month<=12;month++){
+                document.write("<option value = '" + month + "'>" + months[month-1] + "</option>")
+            }
+        </script>
+    </select>
+    <select>
+        <option>Select year</option>
+        <script>
+            var currentYear = new Date().getFullYear() // Why do we use Date() instead of TimeDate()?
+            var minYear = currentYear - 100;
+            for(var year=currentYear;year>=minYear;year--){
+                document.write("<option value = '" + year + "'>" + year + "</option>")
+            }
+            /*To do:    1. Include a pre selected date and time. 
+                        2. Include continue() to skip pre selected date
+            */
+    </script>
+    </select>
+    <br>
+    
+
+</body>
+
+</html>
